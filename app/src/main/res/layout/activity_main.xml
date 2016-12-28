@@ -1,37 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="shortestpath.naik.mahesh.shortestpath.MainActivity">
+    android:orientation="vertical"
+    android:weightSum="2"
+    >
 
-    <TextView
-        android:id="@+id/inputarray"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-         />
-    <TextView
-        android:layout_below="@+id/inputarray"
-        android:id="@+id/pathpossible"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-    <TextView
-        android:id="@+id/pathsum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/pathpossible"
-        android:text="Hello World!" />
-    <TextView
-        android:id="@+id/pathlements"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/pathsum"
-        android:text="Hello World!" />
-</RelativeLayout>
+<fragment
+    android:name="shortestpath.naik.mahesh.shortestpath.InputFragment"
+    android:id="@+id/input_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    >
+
+</fragment>
+
+    <fragment
+        android:name="shortestpath.naik.mahesh.shortestpath.OutputFragment"
+        android:id="@+id/output_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="30dp"
+        >
+
+    </fragment>
+</LinearLayout>
